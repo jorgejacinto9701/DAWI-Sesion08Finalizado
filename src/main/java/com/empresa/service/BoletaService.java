@@ -9,6 +9,7 @@ import com.empresa.entidades.ProductoHasBoleta;
 public interface BoletaService {
 
 
+	public abstract Boleta insertaBoleta(Boleta obj);
 	public abstract List<Boleta> listaBoleta(int idCliente);
 	public abstract Optional<Boleta> listaBoletaPorId(int idBoleta);
 	public abstract List<ProductoHasBoleta> listaDetalle(int idBoleta);
