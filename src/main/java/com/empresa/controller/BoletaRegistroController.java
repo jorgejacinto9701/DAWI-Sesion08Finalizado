@@ -86,12 +86,13 @@ public class BoletaRegistroController {
 	@RequestMapping("/eliminaSeleccion")
 	@ResponseBody()
 	public List<Seleccion> eliminar(int idProducto){
-		for (Seleccion x : seleccionados) {
+		seleccionados.removeIf ( (x) -> x.getIdProducto() == idProducto );
+		/*for (Seleccion x : seleccionados) {
 			if (x.getIdProducto() == idProducto) {
 				seleccionados.remove(x);
 				break;
 			}
-		}
+		}*/
 		return this.seleccionados; 
 	}
 	
